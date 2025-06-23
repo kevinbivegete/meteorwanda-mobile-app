@@ -1,7 +1,7 @@
-import React from "react";
-import { View, Text } from "react-native";
-import { Picker } from "@react-native-picker/picker";
 import { Feather } from "@expo/vector-icons";
+import { Picker } from "@react-native-picker/picker";
+import React from "react";
+import { Text, View } from "react-native";
 
 type ProvinceSelectorProps = {
   value: string;
@@ -26,12 +26,14 @@ export default function ProvinceSelector({
           borderRadius: 8,
           borderWidth: 1,
           borderColor: "#eee",
+          overflow: "hidden",
         }}
       >
         <Picker
           selectedValue={value}
           onValueChange={onValueChange}
-          style={{ height: 44 }}
+          style={{ height: 54, paddingHorizontal: 12, fontSize: 18 }}
+          itemStyle={{ fontSize: 18, paddingVertical: 8 }}
         >
           <Picker.Item label="Kigali City" value="Kigali City" />
           <Picker.Item label="Northern Province" value="Northern Province" />
